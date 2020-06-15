@@ -1,0 +1,34 @@
+* {
+    font-family: Microsoft YaHei;
+}
+
+QWidget#SkinWindow
+{
+    background-color:#ffffff;
+    border: 1px solid #cccccc;
+    border-radius:4px;
+}
+
+QPushButton#sysmin {
+   border-image: url(:Resources/MainWindow/btn_mini_normal.gft.png); 
+}
+QPushButton#sysmin:hover {
+   border-image: url(:Resources/MainWindow/btn_mini_highlight.gft.png); 
+}
+QPushButton#sysmin:pressed {
+   border-image: url(:Resources/MainWindow/btn_mini_down.gft.png); 
+}
+
+QPushButton#sysclose {
+   border-image: url(:Resources/MainWindow/btn_close_normal.gft.png); 
+}
+QPushButton#sysclose:hover {
+   border-image: url(:Resources/MainWindow/btn_close_highlight.gft.png); 
+}
+QPushButton#sysclose:pressed {
+   border-image: url(:Resources/MainWindow/btn_close_down.gft.png); 
+}
+
+QLabel#titleIcon{
+    background-image:url(:Resources/MainWindow/qqlogoclassic.png);
+}

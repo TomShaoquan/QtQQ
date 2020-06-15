@@ -1,0 +1,406 @@
+* {
+    font-family: Microsoft YaHei;
+}
+
+QWidget#TalkWindow
+{
+    background-color:#ffffff;
+	border:1px solid #eeeeee;
+}
+
+QWidget#frameWidhet{
+	background-color:#ffffff;
+	border-top:1px solid #eeeeee;
+	border-bottom:1px solid #eeeeee;
+}
+
+QPushButton#sysmin {
+   border-image: url(:Resources/MainWindow/sysbtn_min_normal.png); 
+}
+QPushButton#sysmin:hover {
+   border-image: url(:Resources/MainWindow/sysbtn_min_hover.png); 
+}
+QPushButton#sysmin:pressed {
+   border-image: url(:Resources/MainWindow/sysbtn_min_down.png); 
+}
+
+QPushButton#sysclose {
+   border-image: url(:Resources/MainWindow/sysbtn_close_normal.png); 
+}
+QPushButton#sysclose:hover {
+   border-image: url(:Resources/MainWindow/sysbtn_close_hover.png); 
+}
+QPushButton#sysclose:pressed {
+   border-image: url(:Resources/MainWindow/sysbtn_close_down.png); 
+}
+
+QLabel#nameLabel {
+    font-size: 16px;
+    color:#333333;
+}
+
+QLabel#signLabel {
+    font-size: 12px;
+    color:#333333;
+}
+
+QLabel#skinLabel {
+    border-image:url(:Resources/MainWindow/skin.png);
+    border-width: 2px;
+    border-bottom-right-radius:4px;
+}
+
+QWidget#listWidget{
+border-top-left-radius:4px;
+border-top-right-radius:0px;
+border-bottom-left-radius:4px;
+}
+
+QPushButton#rightSpliterBtn {
+   border-image: url(:Resources/MainWindow/aio_splitbutton_right_normal.png); 
+   border-width:0px;
+}
+QPushButton#rightSpliterBtn:hover {
+   border-image: url(:Resources/MainWindow/aio_splitbutton_right_hover.png); 
+   border-width:0px;
+}
+QPushButton#rightSpliterBtn:pressed {
+   border-image: url(:Resources/MainWindow/aio_splitbutton_right_down.png); 
+   border-width:0px;
+}
+
+QToolButton#closeBtn {
+   background-color: rgb(141, 210, 235);
+   color:#ffffff;
+   font-size:12px;
+   border-radius:4px;
+   padding-right:0px;
+}
+QToolButton#closeBtn:hover {
+   background-color: rgba(141, 210, 235, 150);
+}
+QToolButton#closeBtn:pressed {
+   background-color: rgba(141, 210, 235, 150);
+}
+
+QToolButton#sendBtn {
+   background-color: rgb(141, 210, 235);
+   color:#ffffff;
+   font-size:12px;
+   border-radius:4px;
+   padding-right:20px;
+}
+QToolButton#sendBtn:hover {
+   background-color: rgba(141, 210, 235, 150);
+}
+QToolButton#sendBtn:pressed {
+   background-color: rgba(141, 210, 235, 150);
+}
+
+QToolButton#sendBtn::menu-button {
+    margin-top:5px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 1px solid rgba(255, 255, 255, 100);
+    background-color: transparent;
+    width: 24px;
+    height: 14px;
+}
+
+QToolButton#sendBtn::menu-arrow {
+    image: url(:Resources/MainWindow/aio_setting_white_normal.png);
+}
+
+QPushButton#faceBtn {
+   border-image: url(:Resources/MainWindow/aio_quickbar_face.png); 
+}
+QPushButton#faceBtn:hover {
+   background-image:url(:Resources/MainWindow/aio_quickbar_face_hover.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+   border-width:2px;
+}
+QPushButton#faceBtn:pressed, QPushButton#faceBtn:checked {
+   background-image:url(:Resources/MainWindow/aio_quickbar_face_hover.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+   border-width:2px;
+}
+
+QPushButton#fileopenBtn {
+   border-image: url(:Resources/MainWindow/fileopen.png); 
+}
+QPushButton#fileopenBtn:hover {
+   background-image:url(:Resources/MainWindow/fileopen_hover.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+   border-width:2px;
+}
+QPushButton#fileopenBtn:pressed, QPushButton#fileopenBtn:checked {
+   background-image:url(:Resources/MainWindow/fileopen_press.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+   border-width:2px;
+}
+
+QPushButton#addtoolbtn {
+   background-color:transparent;
+   background-image: url(:Resources/MainWindow/aio_toobar_add.png); 
+   background-position:center;
+}
+QPushButton#addtoolbtn:hover {
+   background-image:url(:Resources/MainWindow/aio_toobar_add.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+   border-width:2px;
+}
+QPushButton#addtoolbtn:pressed {
+   background-image:url(:Resources/MainWindow/aio_toobar_add.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+   border-width:2px;
+}
+
+QPushButton#addhumanBtn {
+   background-color:transparent;
+   background-image: url(:Resources/MainWindow/aio_toobar_addhuman.png); 
+   background-position:center;
+}
+QPushButton#addhumanBtn:hover {
+   background-image:url(:Resources/MainWindow/aio_toobar_addhuman.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+   border-width:2px;
+}
+QPushButton#addhumanBtn:pressed {
+   background-image:url(:Resources/MainWindow/aio_toobar_addhuman.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+   border-width:2px;
+}
+
+QPushButton#appBtn {
+   background-color:transparent;
+   background-image: url(:Resources/MainWindow/aio_toobar_app.png); 
+   background-position:center;
+}
+QPushButton#appBtn:hover {
+   background-image:url(:Resources/MainWindow/aio_toobar_app.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+   border-width:2px;
+}
+QPushButton#appBtn:pressed {
+   background-image:url(:Resources/MainWindow/aio_toobar_app.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+   border-width:2px;
+}
+
+QPushButton#videoBtn {
+   background-color:transparent;
+   background-image: url(:Resources/MainWindow/aio_toobar_report.png); 
+   background-position:center;
+}
+QPushButton#videoBtn:hover {
+   background-image:url(:Resources/MainWindow/aio_toobar_report.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+   border-width:2px;
+}
+QPushButton#videoBtn:pressed {
+   background-image:url(:Resources/MainWindow/aio_toobar_report.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+   border-width:2px;
+}
+
+QPushButton#toolsetBtn {
+   background-color:transparent;
+   background-image: url(:Resources/MainWindow/aio_toobar_tool.png); 
+   background-position:center;
+}
+QPushButton#toolsetBtn:hover {
+   background-image:url(:Resources/MainWindow/aio_toobar_tool.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+   border-width:2px;
+}
+QPushButton#toolsetBtn:pressed {
+   background-image:url(:Resources/MainWindow/aio_toobar_tool.png);
+   background-position:center;
+   border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+   border-width:2px;
+}
+
+QWidget#rightStackedWidget{
+	background-color:#ffffff;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
+}
+
+QListView {
+    background-color: rgb(48, 165, 106);
+    padding:4px;
+}
+
+QListView::item{
+	border-radius:4px;
+	background-color: transparent;
+	height:44px;
+}
+
+QListView::item:selected {
+    border-radius:4px;
+    background-color: rgba(141, 210, 235, 150);
+}
+
+QListView::item:selected:!active {
+     border-radius:4px;
+     background-color: rgba(141, 210, 235, 150);
+}
+
+QListView::item:selected:active {
+     border-radius:4px;
+    background-color: rgba(141, 210, 235, 150);
+}
+
+QListView::item:hover {
+    background-color: rgba(141, 210, 235, 100);
+}
+
+QPushButton#tclosebtn {
+   border-image: url(:Resources/MainWindow/close.png); 
+   border-width:0px;
+}
+QPushButton#tclosebtn:hover {
+   border-image: url(:Resources/MainWindow/close-hover.png); 
+   border-width:0px;
+}
+QPushButton#tclosebtn:pressed {
+   border-image: url(:Resources/MainWindow/close-hover.png); 
+   border-width:0px;
+}
+
+QLabel#msgLabel{
+	color:#333333;
+	font-size:12px;
+}
+
+QMenu#senMenu {
+	border-image:url(:Resources/MainWindow/menu_bkg.gft.png);
+	border-width: 2px;
+}
+
+QMenu#senMenu::item {
+	padding: 4px 12px 4px 26px;
+    background-color: #ffffff;
+	height:24px;
+}
+
+QMenu#senMenu::item:hover {
+    background-color: rgb(51, 127, 209);
+}
+
+QMenu#senMenu::item:selected {
+    background-color: rgb(51, 127, 209);
+}
+
+QMenu#senMenu::icon{
+	width: 24px;
+    height: 24px;
+}
+
+QMenu#senMenu::indicator:exclusive:checked {
+    image:url(:Resources/MainWindow/menu_check.png);
+}
+
+QMenu#senMenu::indicator:exclusive:checked:selected {
+    image:url(:Resources/MainWindow/menu_check.png);
+}
+
+QMenu#senMenu::separator {
+    height: 1px;
+    background: #eeeeee;
+}
+
+QMenu#senMenu::indicator {
+	padding: 0px 0px 0px 6px;
+    width: 16px;
+    height: 16px;
+}
+
+QComboBox{
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+
+QComboBox:hover, QComboBox:open{
+    border: 1px solid rgb(55, 143, 207);
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+
+QComboBox:editable {
+    background: #ffffff;
+}
+
+QComboBox::drop-down {
+     border-left-width: 0px;
+     width:24px;
+}
+
+QComboBox::down-arrow {
+    image: url(:Resources/MainWindow/list_down.png);
+}
+
+
+QComboBox QListView {
+    border:1px solid rgb(55, 143, 207);
+    selection-background-color: rgb(55, 143, 207);
+	background-color: #ffffff;
+}
+
+QComboBox QAbstractItemView {
+    color:#333333;
+    font-size:12px;
+}
+
+ QScrollBar:horizontal{
+     background: #ffffff;
+     height: 6px;
+ }
+ QScrollBar::handle:horizontal{
+     background:#cccccc;
+     border-radius:3px;
+     height: 6px;
+ }
+
+ QScrollBar::sub-line:horizontal{
+     background:transparent;
+ }
+ QScrollBar::add-line:horizontal{
+     background:transparent;
+ }
+
+ QScrollBar:vertical {
+     background: #ffffff;
+     width: 6px;
+ }
+ QScrollBar::handle:vertical {
+     background:#cccccc;
+     border-radius:3px;
+     width: 6px;
+ }
+
+ QScrollBar::sub-line:vertical {
+     background:transparent;
+ }
+ QScrollBar::add-line:vertical {
+     background:transparent;
+ }
+ 
+ QWidget#titleWidget{
+	 border-top:0px;
+ }

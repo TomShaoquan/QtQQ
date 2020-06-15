@@ -1,0 +1,79 @@
+* {
+    font-family: Microsoft YaHei;
+}
+
+QWidget#UserLogin
+{
+    background-color:#ffffff;
+    border: 1px solid #cccccc;
+    border-radius:4px;
+}
+
+QLabel#TitleContent{
+	font-size:12px;
+	color:#ffffff;
+}
+
+QPushButton#loginBtn{
+	font-size:14px;
+	background:rgb(7, 189, 253);
+	color:#ffffff;
+	border:none;
+	border-radius:4px;
+}
+
+QPushButton#loginBtn:hover, QPushButton#loginBtn:pressed{
+	background:rgb(33, 200, 253);
+}
+
+QPushButton#forgetWordbtn, QPushButton#registBtn{
+	background:transparent;
+	font-size: 12px;
+	color: rgb(0,148, 206);
+	border:none;
+}
+
+QPushButton#forgetWordbtn:hover, QPushButton#registBtn:hover{
+	color: rgb(0,164, 222);
+}
+
+QCheckBox{
+    spacing: 5px;
+	font-size: 12px;
+	color: #666666;
+	background-color:transparent;
+}
+
+QCheckBox::indicator:enabled, QCheckBox::indicator:enabled:unchecked{  
+    width:15px;
+	height:15px; 
+    border-image: url(:Resources/MainWindow/checkbox_normal.png);
+}
+
+QCheckBox::indicator:enabled:unchecked:hover {
+    image: url(:Resources/MainWindow/checkbox_hightlight.png);	
+}
+
+QCheckBox::indicator:enabled:checked { 
+    border-image: url(:Resources/MainWindow/checkbox_tick_normal.png);
+}
+
+QCheckBox::indicator:enabled:checked:hover { 
+    border-image: url(:Resources/MainWindow/checkbox_tick_highlight.png);
+}
+
+QLineEdit#editUserAccount, QLineEdit#editPassword{
+	background: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #666666;
+}
+
+QLineEdit#editUserAccount:hover, QLineEdit#editPassword:hover{
+	background: #FFFFFF;
+	border: 1px solid rgb(0, 161, 219);
+	border-radius: 2px;
+	font-size: 14px;
+	color: #666666;
+}

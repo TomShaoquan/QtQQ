@@ -1,0 +1,273 @@
+* {
+    font-family: Microsoft YaHei;
+}
+
+QWidget#CCMainWindowClass
+{
+    background-color:#ffffff;
+    border: 1px solid #cccccc;
+    border-radius:4px;
+}
+
+QPushButton#palcehold1 {
+   background-image: url(:Resources/MainWindow/medalwall_ani.png);
+   background-repeat: no-repeat;
+   background-color:transparent;
+}
+QPushButton#palcehold1:hover {
+   background-image: url(:Resources/MainWindow/btn_medalwall_dark.png); 
+}
+QPushButton#palcehold1:pressed {
+   background-image: url(:Resources/MainWindow/btn_medalwall_dark.png); 
+}
+
+QPushButton#placehold2 {
+   background-image: url(:Resources/MainWindow/AccProt_disable.png); 
+   background-repeat: no-repeat;
+   background-position: 50% 0;
+   background-color:transparent;
+}
+QPushButton#placehold2:hover {
+   background-image: url(:Resources/MainWindow/BriAni_3.png); 
+   background-color: rgba(255, 255, 255, 20);
+}
+QPushButton#placehold2:pressed {
+   background-image: url(:Resources/MainWindow/BriAni_3.png); 
+   background-color: rgba(255, 255, 255, 50);
+}
+
+QPushButton#sysmin {
+   border-image: url(:Resources/MainWindow/btn_mini_normal.gft.png); 
+}
+QPushButton#sysmin:hover {
+   border-image: url(:Resources/MainWindow/btn_mini_highlight.gft.png); 
+}
+QPushButton#sysmin:pressed {
+   border-image: url(:Resources/MainWindow/btn_mini_down.gft.png); 
+}
+
+QPushButton#sysclose {
+   border-image: url(:Resources/MainWindow/btn_close_normal.gft.png); 
+}
+QPushButton#sysclose:hover {
+   border-image: url(:Resources/MainWindow/btn_close_highlight.gft.png); 
+}
+QPushButton#sysclose:pressed {
+   border-image: url(:Resources/MainWindow/btn_close_down.gft.png); 
+}
+
+QLabel#titleIcon{
+    background-image:url(:Resources/MainWindow/qqlogoclassic.png);
+}
+
+QPushButton[hasborder = true]{
+    background-color:transparent;
+}
+
+QPushButton[hasborder = true]:hover{
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+}
+
+QPushButton[hasborder = true]:pressed{
+    border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+    border-width:2px;
+}
+
+ QScrollBar{
+     background: #ffffff;
+     width: 6px;
+ }
+ QScrollBar::handle{
+     background:#cccccc;
+     border-radius:3px;
+     width: 6px;
+ }
+
+ QScrollBar::sub-line{
+     background:transparent;
+ }
+ QScrollBar::add-line{
+     background:transparent;
+ }
+
+QLineEdit#lineEdit {
+    background-color:transparent;
+    text-align:center;
+}
+
+QLineEdit#lineEdit:hover {
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+    padding-left:-2px;
+}
+
+QLineEdit#lineEdit:focus {
+    border-image:url(:Resources/MainWindow/edit.png);
+    border-width:2px;
+    padding-left:-2px;
+}
+
+QWidget#searchWidget {
+    background-color:rgba(22, 154, 218, 50);
+}
+
+QLineEdit#searchLineEdit {
+    background-color:transparent;
+}
+
+QPushButton#searchBtn {
+    border-image:url(:Resources/MainWindow/search/search_icon.png);
+}
+
+QPushButton#bottomBtn_1{
+    border-image:url(:Resources/MainWindow/bottom/menu_btn_normal.png);
+}
+
+QPushButton#bottomBtn_1:hover{
+    background-image:url(:Resources/MainWindow/bottom/menu_btn_highlight.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_1:pressed{
+    background-image:url(:Resources/MainWindow/bottom/menu_btn2_down.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_2{
+    border-image:url(:Resources/MainWindow/bottom/tools.png);
+}
+
+QPushButton#bottomBtn_2:hover{
+    background-image:url(:Resources/MainWindow/bottom/tools_hover.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_2:pressed{
+    background-image:url(:Resources/MainWindow/bottom/tools_down.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_3{
+    border-image:url(:Resources/MainWindow/bottom/message.png);
+}
+
+QPushButton#bottomBtn_3:hover{
+    background-image:url(:Resources/MainWindow/bottom/message_highlight.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_3:pressed{
+    background-image:url(:Resources/MainWindow/bottom/message_down.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_4{
+    border-image:url(:Resources/MainWindow/bottom/mycollection_mainpanel.png);
+}
+
+QPushButton#bottomBtn_4:hover{
+    background-image:url(:Resources/MainWindow/bottom/myCollection_mainpanel_hover.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_4:pressed{
+    background-image:url(:Resources/MainWindow/bottom/myCollection_mainpanel_down.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_5{
+    border-image:url(:Resources/MainWindow/bottom/filemanager.png);
+}
+
+QPushButton#bottomBtn_5:hover{
+    background-image:url(:Resources/MainWindow/bottom/filemanager_hover.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_5:pressed{
+    background-image:url(:Resources/MainWindow/bottom/filemanager_down.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_6{
+    border-image:url(:Resources/MainWindow/bottom/find.png);
+}
+
+QPushButton#bottomBtn_6:hover{
+    background-image:url(:Resources/MainWindow/bottom/find_hover.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_6:pressed{
+    background-image:url(:Resources/MainWindow/bottom/find_down.png);
+    background-position:center;
+    border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_7{
+    background-color:transparent;
+}
+
+QPushButton#bottomBtn_7:hover{
+    border-image:url(:Resources/MainWindow/2014_btn_hover.gft.png);
+    border-width:2px;
+}
+
+QPushButton#bottomBtn_7:pressed{
+    border-image:url(:Resources/MainWindow/2014_btn_down.gft.png);
+    border-width:2px;
+}
+
+QTreeView
+{
+   border-style:none;   
+}
+
+QTreeView::item
+{
+   color:rgba(255, 255, 255, 0);  
+}
+
+QTreeView::item:selected:active
+{
+    background-color: rgba(135, 206, 250, 153); 
+}
+
+QTreeView::item:selected:!active, QTreeView::item:hover 
+{
+    background-color: rgba(135, 206, 250, 50);
+}
+
+QLabel#userName {
+    font-size:14px;
+    color:#000000;
+}
+
+QLabel#signName {
+    font-size:12px;
+    color:#808080;
+}

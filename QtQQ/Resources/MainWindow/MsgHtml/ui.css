@@ -1,0 +1,96 @@
+*{
+	font-family: Microsoft YaHei;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: transparent;
+}
+ 
+::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    background-color: #cccccc;
+}
+
+.time {
+    color: #666666;
+    width: 100%;
+    height: 16px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.msg-wrap{
+    margin: 10px 0;
+    clear: both;
+}
+.msg-wrap:before, .msg-wrap:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+.msg-wrap .header{
+    width: 32px ;
+    height: 32px;
+	border-radius:16px;
+    vertical-align: middle;
+}
+.msg-wrap.left .header{
+    float: left;
+}
+
+.msg-wrap.right .header{
+    float: right;
+}
+
+.msg {
+    max-width: 70%;
+    font-size:13px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    padding: 8px 5px;
+    position: relative;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.left .msg {
+    color:#000;
+    float: left;
+    background:rgb(205, 215,226);
+    margin-left: 12px;
+}
+
+.left .msg .trigon {
+  top:5px;
+  left: -15px;
+  border-color:transparent rgb(205,215,226) transparent transparent;
+}
+
+.right .msg {
+    float: right;
+    background:rgb(120, 205,248);
+    margin-right: 12px;
+}
+
+.right .msg .trigon {
+  top:5px;
+  right: -15px;
+  border-color:transparent transparent transparent rgb(120, 205,248);;
+}
+
+.trigon {
+  width:0;
+  height:0;
+  border-width:10px;
+  border-style:solid;
+  position: absolute;
+  z-index:-1;
+}

@@ -1,0 +1,30 @@
+QMenu {
+    border-image:url(:Resources/MainWindow/menu/menuex_backgroundSetting.png);
+	    border-width:0;
+}
+QMenu::item {
+    padding: 6px 24px 6px 36px;
+}
+
+QMenu::icon {
+	padding: 0px 0px 0px 9px;
+}
+
+QMenu::separator 
+{
+	margin-left:24px;
+	margin-right:4px;
+    border-image: url(:Resources/MainWindow/menu/menu_separate.png);
+}
+QMenu::item:selected {
+    border-image:url(:Resources/MainWindow/menu/mune_select_bkgSetting.png);
+    padding: 6px 24px 6px 36px;
+}
+QMenu::item:hover {
+    border-image:url(:Resources/MainWindow/menu/mune_select_bkgSetting.png);
+    padding: 6px 24px 6px 36px;
+}
+
+QMenu::right-arrow {
+    image: url(:Resources/MainWindow/menu/menuItemEx_arrowTextureSetting.png);
+}

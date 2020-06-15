@@ -1,0 +1,44 @@
+* {
+    font-family: Microsoft YaHei;
+}
+
+QWidget#SendFile
+{
+    background-color:#ffffff;
+    border: 1px solid #cccccc;
+    border-radius:4px;
+}
+
+QLabel#TitleContent{
+	font-size:12px;
+	color:#ffffff;
+}
+
+QPushButton#openBtn,QPushButton#sendBtn{
+	font-size:14px;
+	background:rgb(7, 189, 253);
+	color:#ffffff;
+	border:none;
+	border-radius:4px;
+}
+
+QPushButton#openBtn:hover, QPushButton#openBtn:pressed,
+QPushButton#sendBtn:hover,QPushButton#sendBtn:pressed{
+	background:rgb(33, 200, 253);
+}
+
+QLineEdit#lineEdit{
+	background: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #666666;
+}
+
+QLineEdit#lineEdit:hover{
+	background: #FFFFFF;
+	border: 1px solid rgb(0, 161, 219);
+	border-radius: 2px;
+	font-size: 14px;
+	color: #666666;
+}
