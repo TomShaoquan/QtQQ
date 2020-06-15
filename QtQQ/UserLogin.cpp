@@ -3,6 +3,9 @@
 #include<QMessageBox>
 #include<qsqldatabase.h>
 #include<QSqlQuery>
+#include<QSqlError>
+#include<QSqlDatabase>
+
 #include"common.h"
 
 QString gLoginEmployeeID;	// 登陆者员工号
@@ -37,8 +40,7 @@ void UserLogin::initControl()
 
 	if (!connectMySql())
 	{
-		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"),
-			QString::fromLocal8Bit("连接数据库失败"));
+		
 		close();
 	}
 }
@@ -58,6 +60,9 @@ bool UserLogin::connectMySql()
 	}
 	else
 	{
+		QSqlError error=db.lastError();
+		QMessageBox::information(NULL, QString::fromLocal8Bit("连接数据库失败"),
+			QString::fromLocal8Bit("reason:%s").arg(error.text()));
 		return false;
 	}
 }
