@@ -62,7 +62,7 @@ bool UserLogin::connectMySql()
 	{
 		QSqlError error=db.lastError();
 		QMessageBox::information(NULL, QString::fromLocal8Bit("连接数据库失败"),
-			QString::fromLocal8Bit("reason:%s").arg(error.text()));
+			db.lastError().databaseText());
 		return false;
 	}
 }
