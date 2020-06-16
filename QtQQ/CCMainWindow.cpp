@@ -14,6 +14,8 @@
 #include<qapplication.h>
 #include"WindowManger.h"
 #include<QSqlQuery>
+#include<QDir>
+#include"common.h"
 
 extern QString gLoginEmployeeID;
 QString gstrLoginHeadPath;
@@ -45,7 +47,22 @@ CCMainWindow::CCMainWindow(QString account, bool isAccountLogin,QWidget *parent)
 	ui.setupUi(this);
 	setWindowFlags(windowFlags() | Qt::Tool);
 	loadStyleSheet("CCMainWindow");
-	setHeadPixmap(getHeadPicturePath());
+	QDir head_imgs("./", "qtqq_images");
+	if (!head_imgs.exists())
+	{
+		head_imgs.mkdir("qtqq_images");
+	}
+	QString headPath ="./qtqq_images/" + gLoginEmployeeID + ".png";
+	/*QFile file_t("./cur.txt");
+	file_t.open(QIODevice::WriteOnly);
+	file_t.close();*/
+	
+
+	setHeadPixmap(headPath);
+
+	print_run_log(headPath);
+	print_run_log(head_imgs.currentPath());
+
 	initControl();
 	initTimer();
 }
@@ -248,7 +265,7 @@ void CCMainWindow::initContactTree()
 	addCompanyDeps(pRootGroupItem, SelfDepID);
 
 	RootContatItem* pItemName = new RootContatItem(true, ui.treeWidget);
-	QString strGroupName = QString::fromLocal8Bit("奇牛科技");
+	QString strGroupName = QString::fromLocal8Bit("Connect EveryOne");
 	pItemName->setText(strGroupName);
 
 	//插入分组节点
@@ -272,7 +289,8 @@ void CCMainWindow::addCompanyDeps(QTreeWidgetItem * pRootGroupItem, const int& D
 	queryDepPic.exec();
 	queryDepPic.first();
 	QPixmap groupPix;
-	groupPix.load(queryDepPic.value(0).toString());
+	groupPix.load(getHeadPixPath(QString("%1").arg(DepID)));
+	print_run_log(getHeadPixPath(QString("%1").arg(DepID)));
 
 	ContactItem* pContactItem = new ContactItem(ui.treeWidget);
 	pContactItem->setHeadPixmap(getRoundImage(groupPix,
@@ -286,7 +304,7 @@ void CCMainWindow::addCompanyDeps(QTreeWidgetItem * pRootGroupItem, const int& D
 
 void CCMainWindow::resizeEvent(QResizeEvent * event)
 {
-	setUserName(QString::fromLocal8Bit("奇牛科技-越分享月拥有"));
+	setUserName(QString::fromLocal8Bit("越分享月拥有"));
 	BasicWindow::resizeEvent(event);
 }
 

@@ -164,9 +164,7 @@ void MsgWebView::appendMsg(const QString & html, QString strObj)
 	{
 		this->page()->runJavaScript(QString("recvHtml_%1(%2)").arg(strObj).arg(Msg));
 	}
-	/*this->page()->runJavaScript(QString("appendHtml(%1)").arg(Msg));
-
-	emit signalSendMsg(strData, msgType);*/
+	
 }
 
 QList<QStringList> MsgWebView::parseHtml(const QString & html)

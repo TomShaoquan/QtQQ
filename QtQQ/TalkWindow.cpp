@@ -9,6 +9,7 @@
 #include<QSqlQueryModel>
 #include<QSqlQuery>
 #include"SendFile.h"
+#include"common.h"
 
 TalkWindow::TalkWindow(QWidget *parent, const QString& uid)
 	: QWidget(parent)
@@ -47,8 +48,9 @@ void TalkWindow::onItemDoubleClicked(QTreeWidgetItem* item, int colum)
 	bool bIsChild = item->data(0, Qt::UserRole).toBool();
 	if (bIsChild)
 	{
-		QString strPeopleName = m_groupPeopleMap.value(item);
+		//QString strPeopleName = m_groupPeopleMap.value(item);
 		QString strEmployeeID = item->data(0, Qt::UserRole + 1).toString();
+		if (strEmployeeID == gLoginEmployeeID) return;
 		WindowManger::getInstance()->addNewTalkWindow(strEmployeeID);
 	}
 }
@@ -202,6 +204,7 @@ void TalkWindow::initTalkWindow()
 		int employeeID;
 		QModelIndex modelIndex = queryEmployeeModel.index(i, 0);
 		employeeID = queryEmployeeModel.data(modelIndex).toInt();
+		
 		addPeopInfo(pRootItem,employeeID);
 	}
 }
@@ -228,7 +231,6 @@ void TalkWindow::addPeopInfo(QTreeWidgetItem * pRootGroupItem,int employeeID)
 	ContactItem *pContactItem = new ContactItem(ui.treeWidget);
 	
 	
-
 	//获取名 签名 头像路径
 	QString strName, strSign, strPicPath, strQuery;
 	QSqlQueryModel queryInfoModel;

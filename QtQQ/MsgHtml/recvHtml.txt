@@ -1,0 +1,4 @@
+function recvHtml(msg){
+	$("#placeholder").append(external.msgLHtmlTmpl.format(msg));
+	window.scrollTo(0,document.body.scrollHeight); ;  
+};

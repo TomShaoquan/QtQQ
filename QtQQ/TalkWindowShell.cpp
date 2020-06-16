@@ -137,7 +137,8 @@ void TalkWindowShell::getEmployeesID(QStringList& employeeIDList)
 bool TalkWindowShell::createJSFile(QStringList & employeesList)
 {
 	//读取文件数据
-	QString strFileTxt("Resources/MainWindow/MsgHtml/msgtmpl.txt");
+	//QString strFileTxt("Resources/MainWindow/MsgHtml/msgtmpl.txt");
+	QString strFileTxt(qApp->applicationDirPath()+"/msgtmpl.txt");
 	QFile fileRead(strFileTxt);
 	QString strFile;
 	if (fileRead.open(QIODevice::ReadOnly))
@@ -153,7 +154,8 @@ bool TalkWindowShell::createJSFile(QStringList & employeesList)
 		return false;
 	}
 	//替换(extern0,append10用作自己发信息使用)
-	QFile fileWrite("Resources/MainWindow/MsgHtml/msgtmpl.js");
+	//QFile fileWrite("Resources/MainWindow/MsgHtml/msgtmpl.js");
+	QFile fileWrite(qApp->applicationDirPath()+"/msgtmpl.js");
 	if(fileWrite.open(QIODevice::WriteOnly | QIODevice::Truncate))
 	{
 		//更新空值
@@ -167,8 +169,10 @@ bool TalkWindowShell::createJSFile(QStringList & employeesList)
 			external = channel.objects.external;\
 		}\
 		); ";
+
 		QString strSourceRecvHtml;
-		QFile fileRecvHtml("Resources/MainWindow/MsgHtml/recvHtml.txt");
+		//QFile fileRecvHtml("Resources/MainWindow/MsgHtml/recvHtml.txt");
+		QFile fileRecvHtml(qApp->applicationDirPath()+"/recvHtml.txt");
 		if (fileRecvHtml.open(QIODevice::ReadOnly))
 		{
 			strSourceRecvHtml = fileRecvHtml.readAll();
@@ -255,7 +259,7 @@ void TalkWindowShell::handleReceivedMsg(int senderEmployeeID, int msgType, QStri
 	if (!html.contains(".png") && !html.contains("</span>"))
 	{
 		QString fontHtml;
-		QFile file(":/Resources/MainWindow/MsgHtml/msgFont.txt");
+		QFile file("./MsgHtml/msgFont.txt");
 		if (file.open(QIODevice::ReadOnly))
 		{
 			fontHtml = file.readAll();
@@ -301,7 +305,6 @@ void TalkWindowShell::updateSendTcpMsg(QString & strData, int & msgType, QString
 	}
 	int nstrDataL = strData.length();
 	int dataLength = QString::number(nstrDataL).length();
-	//const int sourceDataLength = dataLength;
 	QString strDataLength;
 	if (msgType == 1)	//发送文本信息
 	{

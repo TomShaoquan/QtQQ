@@ -1,10 +1,9 @@
 #pragma once
-
+#include<qtcpsocket.h>
 #include "basicwindow.h"
 #include "ui_UserLogin.h"
-#include<qtcpsocket.h>
 
-class MyTcpSocket :public QTcpSocket
+class MyTcpSocket : public QTcpSocket
 {
 	Q_OBJECT
 public:
@@ -15,7 +14,6 @@ private slots:
 	void OnDisConnected();
 
 };
-
 class UserLogin : public BasicWindow
 {
 	Q_OBJECT

@@ -40,8 +40,8 @@ void UserLogin::initControl()
 
 	if (!connectMySql())
 	{
-		
 		close();
+		exit(-1); /*退出*/
 	}
 }
 
@@ -62,7 +62,21 @@ bool UserLogin::connectMySql()
 	{
 		QSqlError error=db.lastError();
 		QMessageBox::information(NULL, QString::fromLocal8Bit("连接数据库失败"),
-			QString::fromLocal8Bit("reason:%s").arg(error.text()));
+			db.lastError().databaseText());
+		
+		QFile file(LOG_FILE);
+		file.open(QIODevice::WriteOnly | QIODevice::Append);
+		QTextStream text_stream(&file);
+		text_stream << "database connect error:" << errno<<" "<<error.driverText()<<"\r\n";
+		QStringList drivers = db.drivers();
+		for (int i = 0; i < drivers.size(); i++) {
+			text_stream << "drives:" << drivers[i]<< "\r\n";
+		}
+		text_stream << "bool:"<<db.isOpenError()<<"driverName:" << db.driverName() << "\r\n";
+		text_stream << error.nativeErrorCode();
+
+		file.flush();
+		file.close();
 		return false;
 	}
 }
@@ -148,6 +162,7 @@ void UserLogin::onLoginBtnCicked()
 
 }
 
+
 MyTcpSocket::MyTcpSocket()
 {
 	//QObject::connect(this, SIGNAL(disconnected()),this,SLOT(OnDisConnected()));
@@ -159,11 +174,11 @@ MyTcpSocket::~MyTcpSocket()
 
 void MyTcpSocket::OnDisConnected()
 {
-	bool ok=false;
+	bool ok = false;
 	do
 	{
 		this->connectToHost(SERVER_IP, gtcpProt);
 		ok = this->waitForConnected();
 	} while (!ok);
-	
+
 }
