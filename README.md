@@ -6,10 +6,12 @@
 
 ![image](https://github.com/TomShaoquan/QtQQ/blob/master/QtQQ1.png)
 
-![img](https://github.com/TomShaoquan/QtQQ/blob/test/img/q1.png)
+![img1](https://github.com/TomShaoquan/QtQQ/blob/test/img/q1.png)
 
-![img](https://github.com/TomShaoquan/QtQQ/blob/test/img/q2.png)
+![img2](https://github.com/TomShaoquan/QtQQ/blob/test/img/q2.png)
 
-![img](https://github.com/TomShaoquan/QtQQ/blob/test/img/q3.png)
+![img3](https://github.com/TomShaoquan/QtQQ/blob/test/img/q3.png)
 
-![img](https://github.com/TomShaoquan/QtQQ/blob/test/img/q4.png)
+![img4](https://github.com/TomShaoquan/QtQQ/blob/test/img/q4.png)
+
+
