@@ -38,7 +38,6 @@ public:
 
 };
 
-
 CCMainWindow::CCMainWindow(QString account, bool isAccountLogin,QWidget *parent)
 	: BasicWindow(parent)
 	,m_isAccountLogin(isAccountLogin)
