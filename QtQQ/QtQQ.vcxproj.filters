@@ -97,6 +97,9 @@
     <ClCompile Include="common.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ConfigurePage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="CCMainWindow.h">
@@ -162,6 +165,9 @@
     <QtMoc Include="ReceiveFile.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="ConfigurePage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="CCMainWindow.ui">
@@ -192,6 +198,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="ReceiveFile.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ConfigurePage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

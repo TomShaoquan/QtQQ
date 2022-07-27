@@ -5,11 +5,18 @@
 #include<QApplication>
 
 class MyTcpSocket;
-#define SERVER_IP   "114.55.145.67"
+
+//#define SERVER_IP   "127.0.0.1"    //数据库服务器IP
+//#define MSG_SERVER_IP   "192.168.92.128"   //业务服务器ip
+extern QString dbServerIP;
+extern QString dbServerPort;
+extern QString MsgServerIP;
+extern QString MsgServerPort;
 /*
 /root/projects/QtQQ_Server/bin/x64/Debug
 */
-const int gtcpProt = 8888;
+
+
 
 extern MyTcpSocket gTcpSocket;
 extern QString gLoginEmployeeID;	// 登陆者员工号

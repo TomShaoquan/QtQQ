@@ -89,7 +89,7 @@ ipch/
 *.vsp
 *.vspx
 *.sap
-
+.mp4
 # TFS 2012 Local Workspace
 $tf/
 

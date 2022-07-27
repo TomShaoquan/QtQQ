@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{20381B4B-2BED-40BA-A951-67278DA6BFD8}</ProjectGuid>
     <Keyword>QtVS_v302</Keyword>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -80,15 +80,15 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <QtInstall>Qt5.14.1MSVC2017_64</QtInstall>
+    <QtInstall>Qt5.14.1msvc64</QtInstall>
     <QtModules>core;gui;network;sql;webchannel;webengine;webenginewidgets;widgets;xml</QtModules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="QtSettings">
-    <QtInstall>MSVC5.14.1_32</QtInstall>
+    <QtInstall>Qt5.14.1vs2017</QtInstall>
     <QtModules>core;gui;network;sql;webchannel;webengine;webenginewidgets;widgets;xml</QtModules>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <QtInstall>Qt5.14.1MSVC2017_64</QtInstall>
+    <QtInstall>Qt5.14.1vs2017</QtInstall>
     <QtModules>core;gui;network;sql;webchannel;webengine;webenginewidgets;widgets;xml</QtModules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="QtSettings">
@@ -134,7 +134,7 @@
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>E:\Qt\Qt5.14.1\5.14.1\msvc2017_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Qt\Qt5.14.1\5.14.1\msvc2017_64\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -149,7 +149,7 @@
       </DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>E:\Qt\Qt5.14.1\5.14.1\msvc2017_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Qt\Qt5.14.1\5.14.1\msvc2017_64\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -162,6 +162,7 @@
     <ClCompile Include="CCMainWindow.cpp" />
     <ClCompile Include="common.cpp" />
     <ClCompile Include="CommonUtils.cpp" />
+    <ClCompile Include="ConfigurePage.cpp" />
     <ClCompile Include="ContactItem.cpp" />
     <ClCompile Include="CustomMenu.cpp" />
     <ClCompile Include="EmotionLabelItem.cpp" />
@@ -188,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="CCMainWindow.ui" />
+    <QtUic Include="ConfigurePage.ui" />
     <QtUic Include="ContactItem.ui" />
     <QtUic Include="EmotionWindow.ui" />
     <QtUic Include="ReceiveFile.ui" />
@@ -213,6 +215,7 @@
   <ItemGroup>
     <ClInclude Include="common.h" />
     <ClInclude Include="CommonUtils.h" />
+    <QtMoc Include="ConfigurePage.h" />
     <ClInclude Include="resource.h" />
     <QtMoc Include="ReceiveFile.h" />
     <QtMoc Include="SendFile.h" />

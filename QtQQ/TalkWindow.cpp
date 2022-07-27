@@ -67,6 +67,7 @@ void TalkWindow::onFileOpenBtnClicked(bool)
 
 void TalkWindow::onSendBtnClicded(bool )
 {
+	//debug:发送方的页面接受消息有问题 接受方没有问题
 	if (ui.textEdit->toPlainText().isEmpty())
 	{
 		QToolTip::showText(this->mapToGlobal(QPoint(630, 660)),

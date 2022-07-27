@@ -47,21 +47,10 @@ CCMainWindow::CCMainWindow(QString account, bool isAccountLogin,QWidget *parent)
 	ui.setupUi(this);
 	setWindowFlags(windowFlags() | Qt::Tool);
 	loadStyleSheet("CCMainWindow");
-	QDir head_imgs("./", "qtqq_images");
-	if (!head_imgs.exists())
-	{
-		head_imgs.mkdir("qtqq_images");
-	}
-	QString headPath ="./qtqq_images/" + gLoginEmployeeID + ".png";
-	/*QFile file_t("./cur.txt");
-	file_t.open(QIODevice::WriteOnly);
-	file_t.close();*/
 	
-
-	setHeadPixmap(headPath);
-
-	print_run_log(headPath);
-	print_run_log(head_imgs.currentPath());
+	//获取登录者头像
+	gstrLoginHeadPath = getHeadPicturePath();
+	setHeadPixmap(gstrLoginHeadPath);
 
 	initControl();
 	initTimer();
@@ -144,7 +133,7 @@ QString CCMainWindow::getHeadPicturePath()
 	}
 	queryPicture.next();
 	strPicPath = queryPicture.value(0).toString();
-	gstrLoginHeadPath = strPicPath;
+	gstrLoginHeadPath = strPicPath;  //登录者头像
 	return strPicPath;
 }
 
@@ -289,8 +278,7 @@ void CCMainWindow::addCompanyDeps(QTreeWidgetItem * pRootGroupItem, const int& D
 	queryDepPic.exec();
 	queryDepPic.first();
 	QPixmap groupPix;
-	groupPix.load(getHeadPixPath(QString("%1").arg(DepID)));
-	print_run_log(getHeadPixPath(QString("%1").arg(DepID)));
+	groupPix.load(queryDepPic.value(0).toString());
 
 	ContactItem* pContactItem = new ContactItem(ui.treeWidget);
 	pContactItem->setHeadPixmap(getRoundImage(groupPix,
