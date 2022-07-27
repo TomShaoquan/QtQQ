@@ -1,24 +1,40 @@
 # QtQQ
-这是一个基于Qt5开发的模仿企业QQ的客户端
+
+**这是一个基于Qt5开发的模仿企业QQ的客户端**
 
 ## 1.运行平台环境
 
-Qt版本是：Qt5.14.1 
+| 运行环境 | windows 系列系统 x86_x64 |
+| -------- | ------------------------ |
+| 库依赖   | Qt5.14.1                 |
+| 开发工具 | VS2017                   |
+| 数据库   | myql5.7 64位             |
 
-数据库：myql5.7 64位  
+## 2.界面效果：
 
-开发工具：VS2017
-也就是使用Qt + VS2017开发的项目
-效果：
+**登录**
 
-![image](https://github.com/TomShaoquan/QtQQ/blob/master/QtQQ1.png)
+![login](./image/QtQQ1.png)
 
-![img1](https://github.com/TomShaoquan/QtQQ/blob/test/img/q1.png)
+**主界面**
 
-![img2](https://github.com/TomShaoquan/QtQQ/blob/test/img/q2.png)
+![](./image/QtQQ2.png)
 
-![img3](https://github.com/TomShaoquan/QtQQ/blob/test/img/q3.png)
+**会话窗口**
 
-![img4](https://github.com/TomShaoquan/QtQQ/blob/test/img/q4.png)
+![](./image/QtQQ3.png)
 
+**聊天表情包**
+
+![](./image/QtQQ4.png)
+
+**文件传输**
+
+![](./image/QtQQ5.png)
+
+## 3.代码架构
+
+|                       |                       |
+| --------------------- | --------------------- |
+| ![](./show/code1.png) | ![](./show/code2.png) |
 
